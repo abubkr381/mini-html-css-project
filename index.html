@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TechZone | IT Solutions</title>
+
+    <style>
+        /* ================= GLOBAL ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: #333;
+        }
+
+        /* ================= NAVBAR ================= */
+        .navbar {
+            background: #0a0a0a;
+            color: white;
+            padding: 18px 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 35px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: #00bfff;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        /* ================= HERO ================= */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+        }
+
+        .hero p {
+            margin: 15px 0 25px;
+            font-size: 20px;
+        }
+
+        .hero button {
+            padding: 14px 35px;
+            border: none;
+            background: #00bfff;
+            color: white;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .hero button:hover {
+            background: #009acd;
+            transform: scale(1.05);
+        }
+
+        /* ================= SERVICES ================= */
+        .services {
+            padding: 80px;
+            text-align: center;
+        }
+
+        .service-box {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            width: 260px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 40px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        /* ================= ABOUT ================= */
+        .about {
+            background: #f4f6f8;
+            padding: 80px 200px;
+            text-align: center;
+        }
+
+        /* ================= CONTACT ================= */
+        .contact {
+            padding: 80px;
+            text-align: center;
+        }
+
+        .contact form {
+            max-width: 420px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact input,
+        .contact textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            padding: 12px;
+            border: none;
+            background: #00bfff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact button:hover {
+            background: #009acd;
+        }
+
+        /* ================= FOOTER ================= */
+        .footer {
+            background: #0a0a0a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 768px) {
+
+            .menu {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                background: #0a0a0a;
+                flex-direction: column;
+                width: 200px;
+                padding: 20px;
+                display: none;
+            }
+
+            .menu.show {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .service-box {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about {
+                padding: 60px 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">TechZone</div>
+    <div class="menu-toggle">☰</div>
+
+    <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <h1>We Build Modern Websites</h1>
+    <p>Professional IT Solutions for Your Business</p>
+    <button>Get Started</button>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+    <h2>Our Services</h2>
+
+    <div class="service-box">
+        <div class="card">
+            <h3>Web Design</h3>
+            <p>Modern responsive UI designs.</p>
+        </div>
+
+        <div class="card">
+            <h3>Development</h3>
+            <p>Fast & secure websites.</p>
+        </div>
+
+        <div class="card">
+            <h3>SEO</h3>
+            <p>Rank your business on Google.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+        TechZone is a professional IT agency providing
+        high-quality digital solutions worldwide.
+    </p>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button>Send Message</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    © 2026 TechZone | All Rights Reserved
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("show");
+    });
+</script>
+
+</body>
+</html>
